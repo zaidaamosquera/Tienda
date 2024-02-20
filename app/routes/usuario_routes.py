@@ -1,5 +1,4 @@
 from flask import Blueprint, flash, render_template, request, redirect, url_for, jsonify,Flask,session
-from numpy import roll
 from app.models.Usuario import Usuario
 from flask_login import login_user, logout_user, login_required, current_user
 from app import db
