@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <div class="encabezadologin">
+        <img src="{{url_for('static', filename='imagenes/Logo.png') }}" height="120px">
+
+        <div class="izquierda">
+
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor"
+                    class="bi bi-bag-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
+                </svg>
+
+                <a href="{{url_for('cliente.add')}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                    </svg></a>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contenedor">
+        <div class="Registrarse"> REGISTRARSE </div>
+        <form method="post" action="{{url_for('cliente.add')}}">
+            <div>
+                <div class="li">
+                    <div class="sub"><label for="username">Nombre:</label></div>
+                    <input class="lolo" type="text" name="Nombre" id="username" required>
+                </div>
+                <div class="li">
+                    <div class="sub"><label for="username">Identificación:</label> </div>
+                    <input class="lolo" type="text" name="Identificacion" id="" required>
+                </div>
+
+                <div class="li">
+                    <div class="sub"><label for="text">Telefono:</label> </div>
+                    <input class="lolo" type="text" name="Telefono" id="" required>
+                </div>
+                <div class="li">
+                    <div class="sub"> <label for="password">Contraseña:</label></div>
+                    <input class="lolo" type="password" name="Contraseña" required>
+
+                </div>
+                <button class="btn" type="submit">Registrarte</button>
+                <a href="{{url_for('cliente.add')}}">
+                    <a class="btn" href="{{url_for('cliente.iniciar')}}">Inicia sesión</a>
+                </a>
+
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="todofooter">
+            <div class="los">
+                <div>
+                    <ul class="ull">
+                        Explore ZV7.com
+                    </ul>
+                    <ul>
+                        Gafas
+                    </ul>
+                    <ul>
+                        Relojes
+                    </ul>
+                    <ul>
+                        Joyeria
+                    </ul>
+                    <ul>
+                        Moda
+                    </ul>
+                    <ul>
+                        Perfumes
+                    </ul>
+                </div>
+            </div>
+            <div class="los">
+                <ul class="ull"> Servicios en línea</ul>
+                <ul>Consejos y Servicios</ul>
+                <ul>Preguntas frecuentes</ul>
+            </div>
+
+            <div class="los">
+                <ul class="ull">Servicios de Boutique</ul>
+                <ul>Citas con ZV7</ul>
+                <ul>Perzonalización</ul>
+
+
+            </div>
+            <div class="los">
+                <ul class="ull">Acerca de ZV7</ul>
+                <ul>Carreras</ul>
+                <ul>Aviso legal</ul>
+                <ul>Aviso legal</ul>
+                <ul>Privacidad</ul>
+                <ul>Privacidad</ul>
+                <ul>Informe a la sociedad</ul>
+                <ul>Lucha contra la falsificación</ul>
+                <ul>Resultados Financieros</ul>
+                <ul>Informe a la sociedad</ul>
+                <ul>Lucha contra la falsificación</ul>
+                <ul>Resultados Financieros</ul>
+            </div>
+        </div>
+
+
+        <center>
+            <div class="ZV7">ZV7</div>
+        </center>
+
+
+
+    </footer>
+
+
+
+</body>

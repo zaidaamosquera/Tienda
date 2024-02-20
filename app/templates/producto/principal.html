@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola desde mi tienda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='principal.css') }}">
+
+</head>
+
+<body>
+
+    <div class="encabezadologin">
+        <img src="{{url_for('static', filename='imagenes/Logo.png') }}" height="120px">
+
+        <div class="izquierda">
+
+            <div>
+                <a href="{{url_for('cliente.add')}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor"
+                        class="bi bi-bag-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
+                    </svg> </a>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" fill="currentColor"
+                    class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+    <div class="menu">
+        <a href="http://">JOYERIA</a>
+        <a href="http://">MODA</a>
+        <a href="http://">GAFAS</a>
+        <a href="http://">RELOJERIA</a>
+        <a href="http://">PERFUMES</a>
+        <a href="http://">HOMBRE</a>
+        <a href="http://">MUJER</a>
+        <a href="http://">CITAS</a>
+        <a href="http://">PERSONALIZACION</a>
+
+        <a href="http://">ACERCA DE NOSOTROS</a>
+    </div>
+
+    <div class="por">
+        <img src="{{url_for('static', filename='imagenes/porta.jpg') }}" height="500px" width="100%">
+        <div class="texto">DESFILE DE PRIMAVERA-VERANO 2024 </div>
+        <div class="text">ALTA COSTURA </div>
+        <div> <a class="boton" href="http://"> VER MÁS </a> </div>
+    </div>
+    <br>
+    <br>
+
+
+
+    <div class="porx">
+        <img src="{{url_for('static', filename='imagenes/moda2.jpg') }}" height="500px" width="100%">
+        <div class="textox">MODA</div>
+        <div class="textx">ALTA COSTURA </div>
+        <div> <a class="boto" href="http://"> Explorar </a> </div>
+    </div>
+    <br>
+    <br>
+
+    <script>
+        explora.onclick = function() {
+          this.style.backgroundColor = 'red';
+        };
+
+    </script>
+
+    <div class="Todo">
+        <div class="muestras">
+            <img src="{{url_for('static', filename='imagenes/reloje.jpeg') }}" height="50%" width="100%">
+            <div class="ttlo">RELOJES</div>
+            <div> <a class="explora" href="">Explorar colección</a></div>
+        </div>
+        <div class="muestras">
+            <img src="{{url_for('static', filename='imagenes/gafas3.jpg') }}" height="50%" width="100%">
+            <div class="tt">GAFAS</div>
+            <div> <a class="explora" href="">Explorar colección</a></div>
+        </div>
+    </div>
+
+    <br> <br>
+    <div class="Todo">
+        <div class="muestras">
+            <img src="{{url_for('static', filename='imagenes/joyeria.jpg') }}" height="50%" width="100%">
+            <div class="ttlo">JOYERIA</div>
+            <div> <a class="explora" href="">Explorar colección</a></div>
+        </div>
+        <div class="muestras">
+            <img src="{{url_for('static', filename='imagenes/perfumes.jpg') }}">
+            <div class="ttlo">PERFUMES</div>
+            <div> <a class="explora" href="">Explorar colección</a>
+
+            </div>
+        </div>
+    </div>
+
+    <br> <br>
+    <div class="Todo">
+        <div class="muestras">
+            <img src="{{url_for('static', filename='imagenes/mujer.jpg') }}" height="50%" width="100%">
+            <div class="ttlo">MUJER</div>
+            <div> <a class="explora" href="">Explorar colección</a></div>
+        </div>
+        <div class="muestras">
+            <img src="{{url_for('static', filename='imagenes/hombre.jpg') }}">
+            <div class="ttlo">HOMBRE</div>
+            <div> <a class="explora" href="">Explorar colección</a>
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="To">
+        <div class="mu">
+            <div class="li">PERSONALIZACIÓN</div>
+            <div class="imx"><img class="imagen" src="{{url_for('static', filename='imagenes/Logo.png') }}"
+                    height="120px"></div>
+            <p class="parrafo">Explora la exclusividad con nuestra nueva colección de prendas, relojes y joyas
+                personalizadas. Sumérgete en el mundo del lujo y la distinción, donde cada pieza se convierte en una
+                declaración de estilo única para ti. Desde elegantes relojes hasta deslumbrantes joyas, tenemos todo lo
+                que necesitas para expresar tu individualidad.</p>
+        </div>
+
+        <div class="mux">
+            <div class="li">CITAS</div>
+            <div class="imxx"> <svg class="zm" xmlns="http://www.w3.org/2000/svg" width="70" height="100" fill="black"
+                    class="bi bi-shop" viewBox="0 0 16 16">
+                    <path
+                        d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
+                </svg></div>
+            <p class="parraf">¡Reserva tu experiencia exclusiva en nuestra tienda física hoy mismo! Descubre nuestras
+                prendas, relojes
+                y joyas personalizadas y déjanos ayudarte a encontrar la pieza perfecta para ti. ¡Haz tu cita ahora y
+                sumérgete en el mundo del lujo y la distinción en nuestra tienda!</p>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="todofooter">
+        <div class="los">
+            <div class="buscar">
+                <ul class="ull">
+                    Explore ZV7.com
+                </ul>
+                <ul>
+                    Gafas
+                </ul>
+                <ul>
+                    Relojes
+                </ul>
+                <ul>
+                    Joyeria
+                </ul>
+                <ul>
+                    Moda
+                </ul>
+                <ul>
+                    Perfumes
+                </ul>
+            </div>
+        </div>    
+        <div class="los">
+            <ul class="ull"> Servicios en línea</ul>
+            <ul>Consejos y Servicios</ul>
+            <ul>Preguntas frecuentes</ul>
+        </div>
+
+        <div class="los"> 
+            <ul class="ull">Servicios de Boutique</ul>
+            <ul>Citas con ZV7</ul>
+            <ul>Perzonalización</ul>
+
+
+        </div>
+        <div class="los">
+            <ul class="ull">Acerca de ZV7</ul>
+            <ul>Carreras</ul>
+            <ul>Aviso legal</ul>
+            <ul>Aviso legal</ul>
+            <ul>Privacidad</ul>
+           <ul>Privacidad</ul> 
+            <ul>Informe a la sociedad</ul>
+            <ul>Lucha contra la falsificación</ul>
+            <ul>Resultados Financieros</ul>
+            <ul>Informe a la sociedad</ul>
+            <ul>Lucha contra la falsificación</ul>
+            <ul>Resultados Financieros</ul>
+        </div>
+        </div>
+
+
+        <center>
+            <div class="ZV7">ZV7</div>
+        </center>
+
+
+
+    </footer>
+
+
+</body>
+
+</html>

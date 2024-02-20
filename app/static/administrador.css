@@ -1,0 +1,81 @@
+.encabezadologin {
+    background-color: white;
+    width: 100%;
+    height: 120px;
+    border: 1px solid white;
+    text-align: center;
+    border-bottom: 1px solid black;
+    align-items: center;
+    display: flex;
+    position: relative;
+    padding: 0%;
+
+}
+
+.encabezadologin img {
+    display: inline-block;
+    margin-top: 0;
+    padding-top: 0;
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    border: 1px solid black;
+    background-color: black;
+    width: 160px;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.btn a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+
+    
+}
+    
+.admi {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    border-bottom: 1px solid black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    color: white;
+    background-color: black;
+ 
+
+}
+
+.conte {
+    width: 700px;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 20px;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.mo {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+

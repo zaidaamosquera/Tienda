@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar datos</title>
+</head>
+<body>
+    <div class="encabezadologin">
+        <img src="{{url_for('static', filename='imagenes/Logo.png') }}" height="120px">
+
+        <div class="izquierda">
+
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-bag-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
+            </svg> 
+
+            <a href="{{url_for('cliente.add')}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" fill="currentColor" class="bi bi-person-fill"
+                viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+            </svg></a>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+        </div>
+        </div>
+
+    </div>
+
+    <h1>Editar Perfil</h1>
+    <form method="post" action="{{url_for('cliente.edit',id = usuario.id)}}>
+        <label for="nombreUsuario">Nombre de Usuario:</label>
+        <input type="text" id="nombreUsuario" name="nombreU" value="{{ usuario.NombreUsuario }}">
+        <br>
+        <label for="identificacion">Identificación:</label>
+        <input type="text" id="identificacion" name="identificacion" value="{{ usuario.Identificacion }}">
+        <br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" value="{{ usuario.Telefono }}">
+        <br>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena">
+        <br>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</body>
+</html>
