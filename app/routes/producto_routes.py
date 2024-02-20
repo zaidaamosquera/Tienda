@@ -16,6 +16,8 @@ def agregarpro():
 
 @bp.route('/producto/add', methods=['GET', 'POST'])
 def add():
+    from app import create_app
+    app = create_app()
     if request.method == 'POST':
         NombreProducto = request.form['Nombre']
         PrecioProducto = request.form['Precio']
@@ -23,12 +25,11 @@ def add():
         imagen = request.files['Imagen']
         if imagen:
             filename = secure_filename(imagen.filename)  
-            imagen.save(os.path.join('/app/static/imagenes filename'))
-
+            imagen.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             ruta_imagen = filename
         else:
             ruta_imagen= 'static/imagenes/default.jpg'
-            new_produc = Producto(NombreProducto=NombreProducto, PrecioProducto=PrecioProducto, Cantidad=Cantidad, Imagenes=imagen)
+        new_produc = Producto(NombreProducto=NombreProducto, PrecioProducto=PrecioProducto, Cantidad=Cantidad,Imagenes = ruta_imagen)
         db.session.add(new_produc)
         db.session.commit()
         return redirect(url_for('produc.add'))
@@ -39,15 +40,24 @@ def add():
 @bp.route('/edit/<int:id>', methods=['POST'])
 def edit(id):
     producto = Producto.query.get_or_404(id)
+    from app import create_app
+    app = create_app()
     if request.method == 'POST':
 
         producto.NombreProducto = request.form['Nombre']
         producto.PrecioProducto = request.form['Precio']
         producto.Cantidad = request.form['Cantidad']
-        producto.Imagen= request.form['Imagen']
+        # imagen = request.files['Imagen']
+        # if imagen:
+        #     filename = secure_filename(imagen.filename)  
+        #     imagen.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        #     ruta_imagen = filename
+        # else:
+        #     ruta_imagen= 'static/imagenes/default.jpg'
+        # producto.Imagenes = ruta_imagen
 
         db.session.commit()
-
+    return redirect(url_for('produc.listaProductos'))
     
 
 @bp.route('/delete/<int:id>',methods=['POST'] )

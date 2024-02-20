@@ -3,7 +3,6 @@ from app.models.Carrito import Carrito
 from app.models.Detalle import Detalle
 from app.models.Factura import Factura
 from app.models.Producto import Producto
-from app.models.Rol import Rol
 from app.models.Usuario import Usuario
 from flask import Blueprint, render_template, redirect, url_for, request, flash
 from app.models.Producto import Producto
@@ -27,7 +26,6 @@ def add():
         new_compra = Carrito(producto=producto, usuario=usuario)
         db.session.add(new_compra)
         db.session.commit()
-
         return redirect(url_for('carrito.add'))
     data = Carrito.query.all()
     return render_template('usuario/carrito.html', data=data)
